@@ -1,25 +1,29 @@
-# 🎣 Fishing Frenzy Auto Bot
+# 🎣 Fishing Frenzy Auto Bot - Doel Edition
 
-An automated fishing bot for [Fishing Frenzy](https://fishingfrenzy.co/) that intelligently manages energy and fishing ranges.
+An advanced automated fishing bot for [Fishing Frenzy](https://fishingfrenzy.co/) with enhanced features and optimizations.
+
+> **🔗 Original Source:** [airdropinsiders/FishingFrenzy-Auto-Bot](https://github.com/airdropinsiders/FishingFrenzy-Auto-Bot)
+> **🛠️ Modified by:** [Doel](https://github.com/doelsumbing87) 🚀
 
 ## ✨ Features
 
-- **Energy-Aware Fishing**: Automatically selects fishing ranges based on available energy
-- **24/7 Operation**: Continuous fishing with automatic retry system
-- **Energy Tracking**: Monitors energy levels and waits for refresh when depleted
-- **Detailed Logging**: Comprehensive console logs with color-coded status updates
-- **Error Handling**: Robust error recovery and connection management
+- **Multi-Account Support**: Run multiple accounts simultaneously with token-based authentication
+- **Energy-Aware Fishing**: Intelligently selects fishing ranges based on available energy
+- **Automated Operations**: 24/7 continuous fishing with retry and energy management
+- **Comprehensive Logging**: Color-coded console logs for better monitoring
+- **Error Handling**: Built-in error recovery and connection stability
 
 ## 📋 Requirements
 
 - Node.js (v14 or higher)
-- Valid Fishing Frenzy authentication token
+- A valid Fishing Frenzy authentication token
+- `token.txt` file with one token per line (for multi-account support)
 
 ## 🚀 Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/airdropinsiders/FishingFrenzy-Auto-Bot.git
+git clone https://github.com/doelsumbing87/FishingFrenzy-Auto-Bot.git
 cd FishingFrenzy-Auto-Bot
 ```
 
@@ -28,10 +32,11 @@ cd FishingFrenzy-Auto-Bot
 npm install
 ```
 
-3. Create a `token.txt` file in the root directory and paste your Fishing Frenzy authentication token:
+3. Create a `token.txt` file and add your Fishing Frenzy authentication token(s):
 ```bash
 echo "YOUR_TOKEN_HERE" > token.txt
 ```
+_For multiple accounts, add one token per line._
 
 ## 💻 Usage
 
@@ -42,20 +47,18 @@ npm start
 
 ## ⚙️ Configuration
 
-You can customize the bot's behavior by modifying the configuration variables in `index.js`:
+Modify the settings in `index.js` to customize the bot's behavior:
 
 ```javascript
 const config = {
-  authToken: authToken,
   apiBaseUrl: 'https://api.fishingfrenzy.co',
   wsUrl: 'wss://api.fishingfrenzy.co',
-  fishingRange: 'mid_range', // default: mid_range
+  fishingRange: 'mid_range',
   is5x: false,
   delayBetweenFishing: 5000,
   retryDelay: 30000,
   maxRetries: 5,
-  energyRefreshHours: 24, // Energy refreshes every 24 hours
-  // Energy cost for each fishing range
+  energyRefreshHours: 24, 
   rangeCosts: {
     'short_range': 1,
     'mid_range': 2,
@@ -66,12 +69,12 @@ const config = {
 
 ## 📊 Energy Management
 
-The bot intelligently selects fishing ranges based on your available energy:
+The bot intelligently selects fishing ranges based on available energy:
 - `short_range`: Costs 1 energy
 - `mid_range`: Costs 2 energy
 - `long_range`: Costs 3 energy
 
-When energy is depleted, the bot will wait for the energy refresh time (default: 24 hours).
+When energy is depleted, the bot will wait for a refresh (default: 24 hours).
 
 ## 🔒 Authentication
 
@@ -84,16 +87,16 @@ To obtain your authentication token:
 
 ## ⚠️ Disclaimer
 
-This bot is provided for educational purposes only. Use of automated scripts may violate Fishing Frenzy's terms of service. Use at your own risk.
+This bot is for educational purposes only. Using automated scripts may violate Fishing Frenzy's terms of service. Use at your own risk.
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project follows the MIT License. See the LICENSE file for details.
 
-## 🤝 Contributing
+## 🤝 Contributions
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions and improvements are welcome! Feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-For questions or support, please open an issue on the GitHub repository.
+For questions or support, open an issue on GitHub or reach out to me at [GitHub](https://github.com/doelsumbing87).
